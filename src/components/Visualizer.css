@@ -1,11 +1,21 @@
+div {
+    display: block;
+}
 .array-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: flex-end;
     width: 95vw;
     height: 75vh;
-    background-color: lightgray;
+
 }
 .array-bar {
-    width: 6vw;
+    width: 7vw;
     display: inline-block;
     margin: 0 1px;
     background-color: cyan;
+}
+.array-value {
+    text-align: center;
 }

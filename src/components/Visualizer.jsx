@@ -12,13 +12,13 @@ function Visualizer(props) {
     const generateArray = (n) => {
         const newArray = []
         for (let i = 0; i < n; i++){
-            newArray.push(randomInteger(1, 100))
+            newArray.push(randomInteger(2, 70))
         }
         setArray(newArray)
     }
 
     useEffect(() => {
-        generateArray(10)
+        generateArray(80)
     }, [])
 
     return (
@@ -28,12 +28,14 @@ function Visualizer(props) {
                     <div 
                         className="array-bar" 
                         key={index}
-                        style={{height: `${value}px`}}>
-                            
-                        {value}
+                        style={{height: `${value * 10}px`}}>
+                        <div className="array-value">
+                            {value}
+                        </div>
                     </div>
                 )}
             </div>
+            <button onClick={() => {generateArray(80)}}>Generate New Array</button>
         </div>
     );
 }
