@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {selectionSort} from '../algorithms/selectionSort'
 import './Visualizer.css'
 
 function Visualizer(props) {
@@ -16,9 +17,13 @@ function Visualizer(props) {
         }
         setArray(newArray)
     }
+    function testSortingAlgorithm() {
+        const sortedArray = selectionSort(array)
+        console.log(sortedArray)
+    }
 
     useEffect(() => {
-        generateArray(80)
+        generateArray(10)
     }, [])
 
     return (
@@ -36,6 +41,8 @@ function Visualizer(props) {
                 )}
             </div>
             <button onClick={() => {generateArray(80)}}>Generate New Array</button>
+            <button onClick={(arr) => {this.selectionSort(arr)}}>Selection Sort</button>
+            <button onClick={() => {testSortingAlgorithm()}}>Test Sorting Algorithm</button>
         </div>
     );
 }
