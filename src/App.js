@@ -10,7 +10,7 @@ function App() {
         <Nav/>
       </div>
 
-      <div className="App-header">
+      <div className="App-main">
         <Visualizer/>
       </div>
       

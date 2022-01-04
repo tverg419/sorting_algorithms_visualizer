@@ -1,5 +1,5 @@
-div {
-    display: block;
+.visualizer {
+    background-color: white;
 }
 .array-container {
     display: flex;
@@ -11,10 +11,10 @@ div {
 
 }
 .array-bar {
-    width: 7vw;
+    width: 4vw;
     display: inline-block;
     margin: 0 1px;
-    background-color: cyan;
+    background-color: #9F9FFF
 }
 .array-value {
     text-align: center;
